@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com/StyloFAO#"
+     xml:base="http://example.com/StyloFAO"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.com/StyloFAO#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/StyloFAO#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/StyloFAO#hasPart"/>
+    
+
+
+    <!-- http://example.com/StyloFAO#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/StyloFAO#partOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/StyloFAO#Bille -->
+
+    <owl:Class rdf:about="http://example.com/StyloFAO#Bille">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Pointe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/StyloFAO#Bouchon -->
+
+    <owl:Class rdf:about="http://example.com/StyloFAO#Bouchon">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Stylo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/StyloFAO#Capuchon -->
+
+    <owl:Class rdf:about="http://example.com/StyloFAO#Capuchon">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Stylo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/StyloFAO#Cartouche -->
+
+    <owl:Class rdf:about="http://example.com/StyloFAO#Cartouche">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Mine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Pointe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Stylo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/StyloFAO#Mine -->
+
+    <owl:Class rdf:about="http://example.com/StyloFAO#Mine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Cartouche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/StyloFAO#ObjetConique -->
+
+    <owl:Class rdf:about="http://example.com/StyloFAO#ObjetConique">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Pointe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/StyloFAO#Pointe -->
+
+    <owl:Class rdf:about="http://example.com/StyloFAO#Pointe">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Bille"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#ObjetConique"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Cartouche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/StyloFAO#Stylo -->
+
+    <owl:Class rdf:about="http://example.com/StyloFAO#Stylo">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Bouchon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Capuchon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Cartouche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#TubeCylindrique"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/StyloFAO#TubeCylindrique -->
+
+    <owl:Class rdf:about="http://example.com/StyloFAO#TubeCylindrique">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/StyloFAO#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/StyloFAO#Stylo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+
